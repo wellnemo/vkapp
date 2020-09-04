@@ -1,1 +1,19 @@
+<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+ 
+<script>
+  // Sends event to client
+  vkBridge.send('VKWebAppInit');
+  
+  // Sending event to client
+bridge
+  .send('VKWebAppGetEmail')
+  .then(data => {
+    // Handling received data
+    console.log(data.email);
+  })
+  .catch(error => {
+    // Handling an error
+  });
+  
+</script> 
 test
