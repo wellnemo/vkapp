@@ -1,19 +1,15 @@
-<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
-  // Sends event to client
-  vkBridge.send('VKWebAppInit');
-  
-  // Sending event to client
-bridge
-  .send('VKWebAppGetEmail')
-  .then(data => {
-    // Handling received data
-    console.log(data.email);
-  })
-  .catch(error => {
-    // Handling an error
-  });
-  
-</script> 
-1test
+$( document ).ready(function() {
+
+ $.get( "https://api.vk.com/method/friends.getOnline?v=5.52&access_token=cWRQncdp0olT9PdbUtpL", function( data ) {
+  $( ".result" ).html( data );
+  alert( "Load was performed." );
+});
+ 
+});
+</script>
+
+2test
+
