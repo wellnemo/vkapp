@@ -3,7 +3,7 @@
 <script>
 $( document ).ready(function() {
 
- $.get( "https://oauth.vk.com/authorize?client_id=7571675&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52", function( data ) {
+ $.get( "https://oauth.vk.com/authorize?client_id=7571675&display=page&redirect_uri=&scope=friends&response_type=token&v=5.52", function( data ) {
   $( ".result" ).html( data );
   alert( "Load was performed." );
 });
